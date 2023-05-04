@@ -18,6 +18,7 @@
 }
 
 * {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 
@@ -53,13 +54,17 @@ nav img {
 
 nav a {
     text-decoration: none;
-    font-family: 'Heebo', sans-serif;;
+    font-family: 'Roboto', sans-serif;
     color: var(--p_colorprincipal);
 }
 
 .link {
     margin-right: 20px;
     margin-right: 30px;
+}
+
+.link:hover {
+    color: #5038a5;
 }
 
 #btn_menu {
@@ -69,7 +74,8 @@ nav a {
 
 #btn_close {
     display: none;
-    margin: 20px;
+    margin-right: -8px;
+    margin-bottom: 20px;
 }
 
 /*PRESENTACION*/
@@ -259,7 +265,7 @@ footer a {
         right: 0;
         background: rgb(238, 233, 233);
         width: 250px;
-        height: 400px;
+        height: 290px;
         z-index: 2;
         flex-direction: column;
         padding: 30px;
@@ -272,8 +278,14 @@ footer a {
 
     #btn_close {
         display: flex;
-        justify-content: end;
+        align-self: flex-end;
+        justify-content: center;
+        align-items: center;
         font-size: 25px;
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
     }
 
     #btn_menu {

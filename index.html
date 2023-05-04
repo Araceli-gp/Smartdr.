@@ -16,7 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Permanent+Marker&display=swap"
-        rel="stylesheet">
+        rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Smart dr.</title>
 </head>
 
@@ -31,7 +33,12 @@
                 }
             </script>
             <div id="menu">
-                <i class="fa-solid fa-xmark" id="btn_close"></i>
+                <i class="fa-solid fa-xmark" id="btn_close" onclick="nav_close();"></i>
+                <script>
+                    function nav_close() {
+                        document.getElementById('menu').style.display = 'none';
+                    }
+                </script>
                 <a href="#nosotros" class="link">¿Quienes somos?</a>
                 <a href="" class="link">Especialistas</a>
                 <a href="" class="link">Agendar cita</a>
@@ -46,7 +53,7 @@
             <div class="iniciar-sesion" id="inicio">
                 <form>
                     <div class="mb-3">
-                        <h2 style="text-align: center;">Ingresa</h2>
+                        <h2 style="text-align: center; font-family: 'Roboto', sans-serif;">Ingresa</h2>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Ingresa tu email</label>
@@ -65,7 +72,7 @@
             <div class="registrarse" id="registro">
                 <form>
                     <div class="mb-3">
-                        <h2 style="text-align: center;">Registrate</h2>
+                        <h2 style="text-align: center; font-family: 'Roboto', sans-serif;">Registrate</h2>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Ingresa tu nombre</label>
