@@ -24,7 +24,14 @@
     <header>
         <nav>
             <a href="index.html"><img src="logo_sd_2020.png"></a>
-            <div>
+            <i class="fa-solid fa-bars" id="btn_menu" onclick="nav();"></i>
+            <script>
+                function nav() {
+                    document.getElementById('menu').style.display = 'flex';
+                }
+            </script>
+            <div id="menu">
+                <i class="fa-solid fa-xmark" id="btn_close"></i>
                 <a href="#nosotros" class="link">¿Quienes somos?</a>
                 <a href="" class="link">Especialistas</a>
                 <a href="" class="link">Agendar cita</a>
