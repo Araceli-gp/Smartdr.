@@ -25,23 +25,24 @@ $(document).ready(function () {
   registrar usuario con correo y contraseña 
  ---------------------------------------*/
 
-    $("#registrar").click(function () {
+    $("#registrar").click(function (e) {
+        e.preventDefault();
         //datos del registro
         var nombre = $("#reg-nombre").val();
         var apellido = $("#reg-apellido").val();
-        var email = $("#reg-email").val();
+        var correo = $("#reg-email").val();
         var password = $("#reg-contraseña").val();
-        // console.log(nombre, apellido, email, password); //funciona 
+        // console.log(nombre, apellido, correo, password); //funciona 
 
         //codigo de firebase
-        firebase.auth().createUserWithEmailAndPassword(email, password)
+        firebase.auth().createUserWithEmailAndPassword(correo, password)
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
                 // ...
                 console.log("se registro");
-                window.location.href = "index.html";
-                addNombre(nombre)
+                //window.location.href = "index.html";
+                //addNombre(nombre)
 
             })
             .catch((error) => {
@@ -50,16 +51,18 @@ $(document).ready(function () {
                 // ..
                 console.log(errorCode, errorMessage);
             });
-
     })
 
     /*--------------------------------------
   iniciar sesion con correo y contraseña
   ----------------------------------------*/
-    $("#ingresar").click(function () {
+    $("#ingresar").click(function (e) {
+        e.preventDefault();
         //variables
         let email = $("#in-email").val();
         let pass = $("#in-contraseña").val();
+
+        console.log("pollito", email, pass);
 
         firebase.auth().signInWithEmailAndPassword(email, pass)
             .then((userCredential) => {
@@ -75,4 +78,27 @@ $(document).ready(function () {
                 console.log(errorCode, errorMessage);
             });
     })
+
+    /*-----------------------------
+     iniciar sesion con google
+  -----------------------------*/
+
+    //boton de google
+    $("#google").click(function (e) {
+        e.preventDefault();
+        // console.log("google")
+
+        //ingresar con google
+        firebase.auth()
+            .signInWithPopup(provider)
+            .then((result) => {
+                console.log("Ingresaste con Google");
+                window.location.href = "inicio.html";
+            }).catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log("Hubo un error", errorCode, errorMessage);
+            });
+
+    });
 });

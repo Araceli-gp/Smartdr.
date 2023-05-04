@@ -48,17 +48,11 @@
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
                         <input type="password" class="form-control" id="in-contraseña">
-                        <!--
-                         <nav>
-                            <a href="" onclick="mostrar();">¿No tienes una cuenta?</a>
-                        </nav>   
-                        -->
                     </div>
-                    <button type="button" id="boton" onclick="mostrar();" class="btn boton"
-                        style="border: 1px solid var(--p_colorprincipal); margin-bottom: 15px;"> <i
-                            class="fa-solid fa-arrow-right-to-bracket"></i>¿No tienes una cuenta?</button>
-                    <button id="ingresar" class="btn boton" style="border: 1px solid var(--p_colorprincipal);"> <i
+                    <button type="button" id="boton" onclick="mostrar();">¿No tienes una cuenta?</button>
+                    <button id="ingresar" class="btn boton" style="border: 1px solid var(--p_colorprincipal); margin-bottom: 15px;"> <i
                             class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar sesion</button>
+                    <button id="google" class="btn boton" style="border: 1px solid var(--p_colorprincipal);"><i class="fa-brands fa-google"></i> Iniciar con google</button>
                 </form>
             </div>
             <div class="registrarse" id="registro">
@@ -109,11 +103,9 @@
             </div>
         </div>
     </div>
-    <!--borrar-->
-    <p>pollito</p>
     <div class="nosotros" id="nosotros">
         <h2 style="font-family: 'Heebo', sans-serif;;">Sobre Nosotros</h2>
-        <div class="carrusel">
+        <div id="carrusel">
             <div class="item-carrusel" id="item-1">
                 <div class="tarjeta-carrusel" id="tarjeta-1">
                     <p>En la actualidad los problemas de salud
