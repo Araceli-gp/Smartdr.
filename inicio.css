@@ -143,7 +143,8 @@ footer a {
 
 .habitos {
     display: flex;
-    border: 1px solid #132959;
+    border: 1px solid var(--p_colorprincipal);
+    border-radius: 20px;
     width: 500px;
     padding: 30px;
     margin: 20px;
@@ -157,8 +158,18 @@ footer a {
     margin-top: 10px;
 }
 
-label {
+#mimir label {
+    margin-right: 28px;
+    margin-top: 18px;
+}
+
+#water label {
     margin-right: 25px;
+    margin-top: 18px;
+}
+
+#ejercicio label {
+    margin-right: 30px;
     margin-top: 18px;
 }
 
@@ -167,10 +178,18 @@ label {
     justify-content: center;
     align-self: center;
     margin-top: 15px;
-    border: 1px solid #02D08E;
+    border: 1px solid var(--p_colorprincipal);
+    background: #6c48ef31;
     width: 190px;
     padding: 8px;
     border-radius: 20px;
+}
+
+
+
+
+.btn_habito:hover {
+    background: #6c48ef5e;
 }
 
 @media screen and (max-width: 999px) {
