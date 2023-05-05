@@ -1,24 +1,222 @@
-.modal {
-    display: none;
-    /* oculta el modal por defecto */
-    position: fixed;
-    /* posición fija */
-    z-index: 1;
-    /* z-index para mostrar sobre otros elementos */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    /* fondo semi-transparente */
+/*
+:root {
+  --p_colorprincipal: #6664C9;
+  --s_colorprincipal: #223254;
+  --celeste: #2896F0;
+  --rosado: #EF3E66;
+  --verde: #45BB89;
+  --amarillo: #FAD40E;
+}
+*/
+:root {
+    --p_colorprincipal: #6C48EF;
+    --s_colorprincipal: #132959;
+    --celeste: #11AAFD;
+    --rosado: #FC3864;
+    --verde: #02D08E;
+    --amarillo: #FBD40B;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    /* tamaño máximo del modal */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+/*font-family: 'Heebo', sans-serif;*/
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/*HEADER*/
+
+header nav {
+    padding-top: 0;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    height: 120px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--p_colorprincipal);
+}
+
+.link {
+    margin-right: 20px;
+    margin-right: 30px;
+}
+
+.link:hover {
+    color: #5038a5;
+}
+
+#btn_menu {
+    display: none;
+    margin: 20px;
+}
+
+#btn_close {
+    display: none;
+    margin-right: -8px;
+    margin-bottom: 20px;
+}
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--s_colorprincipal);
+    color: #ffff;
+    /*bottom: 0;
+    position: absolute;
+    width: 100%;*/
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+footer div:nth-of-type(1) img {
+    height: 120px;
+    width: 169.81px;
+}
+
+footer div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enlaces {
+    display: flex;
+    flex-direction: row;
+}
+
+.enlaces a {
+    margin: 8px;
+    text-decoration: none;
+}
+
+footer div:nth-of-type(2) nav {
+    display: flex;
+    flex-direction: column;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+/*general*/
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*registro de habitos*/
+
+.habitos {
+    display: flex;
+    border: 1px solid #132959;
+    width: 500px;
+    padding: 30px;
+    margin: 20px;
+    justify-content: center;
+}
+
+.habitos form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+}
+
+label {
+    margin-right: 25px;
+    margin-top: 18px;
+}
+
+.btn_habito {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 15px;
+    border: 1px solid #02D08E;
+    width: 190px;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 999px) {
+    #menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: rgb(238, 233, 233);
+        width: 250px;
+        height: 290px;
+        z-index: 2;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    nav div a {
+        margin-top: 18px;
+        color: var(--s_colorprincipal);
+    }
+
+    #btn_close {
+        display: flex;
+        align-self: flex-end;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    #btn_menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
+        background: rgba(238, 229, 229, 0.7);
+        cursor: pointer;
+    }
+
+    #btn_menu:hover {
+        background: rgba(204, 198, 198, 0.7);
+    }
 }
