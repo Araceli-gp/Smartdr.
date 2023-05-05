@@ -1,5 +1,5 @@
 console.log("pollito");
-// Obtiene el botón y el modal por su ID
+
 var btn = document.getElementById("ventana");
 var modal = document.getElementById("mimodal");
 
@@ -15,5 +15,3 @@ btn.onclick = function () {
 span.onclick = function () {
     modal.style.display = "none";
 }
-
-// Cuando el usuario

@@ -58,6 +58,16 @@ nav a {
     color: var(--p_colorprincipal);
 }
 
+#ventana {
+    color: var(--p_colorprincipal);
+    border: none;
+}
+
+#ventana:hover {
+    color: #5038a5;
+    border: none;
+}
+
 .link {
     margin-right: 20px;
     margin-right: 30px;
@@ -165,6 +175,15 @@ footer a {
 
     nav div a {
         margin-top: 18px;
+        color: var(--s_colorprincipal);
+    }
+
+    #ventana {
+        display: flex;
+        justify-content: start;
+        padding: 0;
+        margin-top: 10px;
+        text-align: justify;
         color: var(--s_colorprincipal);
     }
 

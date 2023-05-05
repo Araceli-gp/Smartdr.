@@ -67,6 +67,17 @@ nav a {
     color: #5038a5;
 }
 
+#ventana {
+    color: var(--p_colorprincipal);
+    border: none;
+}
+
+#ventana:hover {
+    color: #5038a5;
+    border: none;
+}
+
+
 #btn_menu {
     display: none;
     margin: 20px;
@@ -298,6 +309,15 @@ footer a {
 
     nav div a {
         margin-top: 18px;
+        color: var(--s_colorprincipal);
+    }
+
+    #ventana {
+        display: flex;
+        justify-content: start;
+        padding: 0;
+        margin-top: 10px;
+        text-align: justify;
         color: var(--s_colorprincipal);
     }
 
