@@ -303,8 +303,59 @@ footer a {
     }
 }
 
-@media only screen  and (max-width:398px) {
-     * {
-        background: #132959;
-     }
+@media only screen  and (max-width:1082px) {
+    * {
+        font-size: 18px;
+    }
+    #carrusel {
+        display: none;
+    }
+}
+
+@media only screen  and (max-width:996px) {
+    * {
+        font-size: 18px;
+    }
+    /*presentacion*/
+    .presentacion img {
+        width: 270px;
+    }
+    .iniciar-sesion, .registrarse {
+        width: 380px;
+        padding-top: 15px;
+    }
+    /*nav*/
+}
+
+@media only screen  and (max-width:726px) {
+    * {
+        font-size: 15px;
+    }
+    /*presentacion*/
+    .presentacion img {
+        display: none;
+    }
+    .iniciar-sesion, .registrarse {
+        width: 380px;
+        padding-top: 15px;
+    }
+}
+
+@media only screen  and (max-width:436px) {
+    * {
+        font-size: 15px;
+    }
+    /*presentacion*/
+    .presentacion img {
+        display: none;
+    }
+    .iniciar-sesion, .registrarse {
+        width: 290px;
+        padding-top: 15px;
+    }
+    /*nav*/
+    #menu {
+        width: 210px;
+        height: 280px;
+    }
 }
