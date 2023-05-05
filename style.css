@@ -302,3 +302,9 @@ footer a {
         background: rgba(204, 198, 198, 0.7);
     }
 }
+
+@media only screen  and (max-width:398px) {
+     * {
+        background: #132959;
+     }
+}
