@@ -153,6 +153,11 @@ form {
     justify-content: center;
 }
 
+#uno, #dos, #tres {
+    display: none;
+}
+
+
 #mimir label {
     margin-right: 28px;
     margin-top: 18px;
