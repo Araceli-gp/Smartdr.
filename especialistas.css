@@ -21,7 +21,7 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-
+    color: var(--s_colorprincipal);
 }
 
 /*font-family: 'Heebo', sans-serif;*/
@@ -83,6 +83,7 @@ nav a {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 10px;
 }
 
 .margin {
