@@ -1,0 +1,59 @@
+/*general*/
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*registro de habitos*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid var(--p_colorprincipal);
+    border-radius: 20px;
+    width: 500px;
+    padding: 30px;
+    margin: 20px;
+    justify-content: center;
+}
+
+#uno,
+#dos,
+#tres {
+    display: none;
+}
+
+
+#mimir label {
+    margin-right: 28px;
+    margin-top: 18px;
+}
+
+#water label {
+    margin-right: 25px;
+    margin-top: 18px;
+}
+
+#ejercicio label {
+    margin-right: 10px;
+    margin-top: 18px;
+}
+
+.btn_habito {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 15px;
+    border: 1px solid var(--p_colorprincipal);
+    background: #6c48ef31;
+    width: 190px;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.btn_habito:hover {
+    background: #6c48ef5e;
+}

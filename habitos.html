@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icono-->
+    <link rel="shortcut icon" type="image/x-icon">
+    <!--CSS-->
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="habitos.css">
+    <link rel="stylesheet" href="cita.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Smart dr.</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="inicio.html"><img src="logo_sd_2020.png"></a>
+            <i class="fa-solid fa-bars" id="btn_menu" onclick="nav();"></i>
+            <script>
+                function nav() {
+                    document.getElementById('menu').style.display = 'flex';
+                }
+            </script>
+            <div id="menu">
+                <i class="fa-solid fa-xmark" id="btn_close" onclick="nav_close();"></i>
+                <script>
+                    function nav_close() {
+                        document.getElementById('menu').style.display = 'none';
+                    }
+                </script>
+                <a href="habitos.html" class="link">Sobre tus hábitos</a>
+                <a href="" class="link">Recomendaciones</a>
+                <button id="ventana" class="link" style="background: none;">Agendar teleconsulta</button>
+                <div id="mimodal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" style="cursor: pointer;">&times;</span>
+                        <p>Lo sentimos está función aun no se encuentra disponible.</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="contenido">
+        <div class="habitos">
+            <form id="cero">
+                <div class="mb-3">
+                    <h2 style="text-align: center; font-family: 'Roboto', sans-serif;">SOBRE TUS HÁBITOS</h2>
+                </div>
+                <div>
+                    <p>Este formulario fue diseñado para que puedas ver un ánalisis de tus hábitos, y de acuerdo a eso
+                        te
+                        generará un reporte con recomendaciones.</p>
+                    <img src="Research paper-cuate.png" style="height: 280px;">
+                </div>
+                <button id="comenzar" class="btn_habito" onclick="a_form();">Comenzar</button>
+            </form>
+            <form id="uno">
+                <div class="mb-3">
+                    <h2 style="text-align: center; font-family: 'Roboto', sans-serif;">AGUA</h2>
+                </div>
+                <div id="water" class="mb-3">
+                    <p>¿Cuántos vasos de agua consumiste hoy?</p>
+                    <p>1 vaso = 250ml</p>
+                    <input id="1vaso" type="radio" name="agua">
+                    <label>1 vaso</label>
+                    <input id="2vaso" type="radio" name="agua">
+                    <label>2 vasos</label>
+                    <input id="3vaso" type="radio" name="agua">
+                    <label>3 vasos</label>
+                    <input id="4vaso" type="radio" name="agua">
+                    <label>4 vasos</label>
+                    <input id="5vaso" type="radio" name="agua">
+                    <label>5 vasos</label>
+                    <input id="6vaso" type="radio" name="agua">
+                    <label>6 vasos</label>
+                    <input id="7vaso" type="radio" name="agua">
+                    <label>7 vasos</label>
+                    <input id="8vaso" type="radio" name="agua">
+                    <label>8 vasos</label>
+                </div>
+                <button id="btn_dos" class="btn_habito" onclick="s_form();">Ir a sueño</button>
+            </form>
+            <form id="dos">
+                <div class="mb-3">
+                    <h2 style="text-align: center; font-family: 'Roboto', sans-serif;">SUEÑO</h2>
+                </div>
+                <div id="mimir" class="mb-3">
+                    <p>¿Cuántas horas dormiste?</p>
+                    <input id="1hora" type="radio" name="dormir">
+                    <label>1 hora</label>
+                    <input id="2hora" type="radio" name="dormir">
+                    <label>2 horas</label>
+                    <input id="3hora" type="radio" name="dormir">
+                    <label>3 horas</label>
+                    <input id="4hora" type="radio" name="dormir">
+                    <label>4 horas</label>
+                    <input id="5hora" type="radio" name="dormir">
+                    <label>5 horas</label>
+                    <input id="6hora" type="radio" name="dormir">
+                    <label>6 horas</label>
+                    <input id="7hora" type="radio" name="dormir">
+                    <label>7 horas</label>
+                    <input id="8hora" type="radio" name="dormir">
+                    <label>8 horas</label>
+                </div>
+                <button id="btn_tres" class="btn_habito" onclick="e_form();">Ir a ejercicio</button>
+            </form>
+            <form id="tres">
+                <div class="mb-3">
+                    <h2 style="text-align: center; font-family: 'Roboto', sans-serif;">EJERCICIO</h2>
+                </div>
+                <div id="ejercicio" class="mb-3">
+                    <p>¿Cuánto tiempo de ejercicio hiciste?</p>
+                    <input id="0ejer" type="radio" name="ejercicios">
+                    <label>0 min.</label>
+                    <input id="15ejer" type="radio" name="ejercicios">
+                    <label>15 min.</label>
+                    <input id="30ejer" type="radio" name="ejercicios">
+                    <label>30 min.</label>
+                    <input id="45ejer" type="radio" name="ejercicios">
+                    <label>45 min.</label>
+                    <input id="1ejer" type="radio" name="ejercicios">
+                    <label>1 hora</label>
+                    <input id="130ejer" type="radio" name="ejercicios">
+                    <label>1 hora y media</label>
+                    <input id="2ejer" type="radio" name="ejercicios">
+                    <label>2 horas</label>
+                    <input id="3ejer" type="radio" name="ejercicios">
+                    <label>3 horas</label>
+                </div>
+                <button class="btn_habito" id="finalizar" onclick="finalizar();">Finalizar</button>
+
+            </form>
+        </div>
+
+    </div>
+    <footer>
+        <div>
+            <a href="index.html"><img src="logo_sd_2020-blanco.png"></a>
+            <nav class="enlaces">
+                <a href="https://www.linkedin.com/company/smartdoctorlatam"><i class="fa-brands fa-linkedin fa-xl"
+                        style="color: #ffffff;"></i></a>
+                <a href="https://www.instagram.com/smartdoctor_br/"><i class="fa-brands fa-instagram fa-xl"
+                        style="color: #ffffff;"></i></a>
+                <a href="https://wa.link/o5tzzq"><i class="fa-brands fa-whatsapp fa-xl" style="color: #ffffff;"></i></a>
+            </nav>
+
+        </div>
+        <div>
+            <nav>
+                <a href="https://smartdoctor.la/pe/politica-privacidad/">Política de Privacidad</a>
+                <a href="https://smartdoctor.la/pe/terminos-condiciones-paciente/">Términos y condiciones</a>
+                <a href="https://smartdoctor.la/pe/tratamiento-datos-personales/">Tratamiento de datos personales</a>
+            </nav>
+        </div>
+    </footer>
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/679880fd67.js" crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!--<a href="https://storyset.com/work">Work illustrations by Storyset</a>-->
+
+    <!--FIREBASE-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!--JS-->
+    <script src="script.js"></script>
+    <script src="cita.js"></script>
+    <script src="inicio.js"></script>
+</body>
+
+</html>
