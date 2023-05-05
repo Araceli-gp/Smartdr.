@@ -144,7 +144,8 @@ form div:nth-of-type(3) nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .nosotros a {
@@ -198,6 +199,32 @@ form div:nth-of-type(3) nav {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+}
+/*NOS*/
+.nos {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.nos div {
+    margin: 30px;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid var(--p_colorprincipal);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.nos img {
+    width: 200px;
 }
 
 
@@ -310,6 +337,9 @@ footer a {
     #carrusel {
         display: none;
     }
+    .nos {
+        display: flex;
+    }
 }
 
 @media only screen  and (max-width:996px) {
@@ -324,7 +354,6 @@ footer a {
         width: 380px;
         padding-top: 15px;
     }
-    /*nav*/
 }
 
 @media only screen  and (max-width:726px) {
@@ -338,6 +367,12 @@ footer a {
     .iniciar-sesion, .registrarse {
         width: 380px;
         padding-top: 15px;
+    }
+    .nos div {
+        width: 250px;
+    }
+    .nos img {
+        width: 150px;
     }
 }
 
