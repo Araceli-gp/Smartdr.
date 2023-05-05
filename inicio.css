@@ -141,21 +141,16 @@ footer a {
 
 /*registro de habitos*/
 
-.habitos {
+form {
     display: flex;
+    flex-direction: column;
+    text-align: center;
     border: 1px solid var(--p_colorprincipal);
     border-radius: 20px;
     width: 500px;
     padding: 30px;
     margin: 20px;
     justify-content: center;
-}
-
-.habitos form {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 10px;
 }
 
 #mimir label {
@@ -169,7 +164,7 @@ footer a {
 }
 
 #ejercicio label {
-    margin-right: 30px;
+    margin-right: 10px;
     margin-top: 18px;
 }
 
@@ -184,9 +179,6 @@ footer a {
     padding: 8px;
     border-radius: 20px;
 }
-
-
-
 
 .btn_habito:hover {
     background: #6c48ef5e;
